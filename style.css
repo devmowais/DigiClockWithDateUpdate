@@ -1,0 +1,114 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(325deg, #03001e36 0%, #dcff16 40%, #1bf02d 60%, #00bfd8 90%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.glow {
+    margin: 0 0 50px 0;
+    font-size: 80px;
+    color: #000000;
+    /*   font-family: 'Oregano', cursive; */
+    /*   text-align: center; */
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3cb7ec, 0 0 40px #3cb7ec, 0 0 50px #3cb7ec, 0 0 60px #3cb7ec, 0 0 70px #3cb7ec;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ffbc05, 0 0 40px #ffbc05, 0 0 50px #ffbc05, 0 0 60px #05ff22, 0 0 70px #05ff22, 0 0 80px #05ff22;
+    }
+}
+
+#clock {
+    background: hidden;
+    /*   background: red; */
+    height: 620px;
+    width: 1150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*   column-gap: 50px; */
+
+}
+
+#day-date {
+    font-size: 45px;
+    /*   background: hidden; */
+    background: linear-gradient(140deg, #03001e36 0%, #dcff16 40%, #1bf02d 60%, #00bfd8 90%);
+    height: 80px;
+    width: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 0 0 30px 0;
+    font-family: 'Caveat Brush', cursive;
+
+}
+
+#time {
+    /*   height: 250px; */
+    font-family: 'Caveat Brush', cursive;
+    /*   width: 580px; */
+    font-size: 80px;
+    background: hidden;
+    /*   background: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#h,
+#m,
+#s {
+    /*   background: #00fbff; */
+    background: linear-gradient(155deg, #03001e36 0%, #dcff16 40%, #1bf02d 60%, #00bfd8 90%);
+    height: 120px;
+    width: 140px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ampm {
+    background: #000000;
+    color: white;
+    height: 120px;
+    width: 140px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    height: 110px;
+    width: 20px;
+    border-radius: -15px;
+}
