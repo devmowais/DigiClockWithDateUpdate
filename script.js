@@ -18,8 +18,11 @@ function clockUpdate() {
     let m = dat.getMinutes();
     let s = dat.getSeconds();
     let y = dat.getFullYear();
-    let AMPM = 'AM';
+    let AMPM = "AM";
 
+    const getWeekday = ['Sunday,', 'Monday,', 'Tuesday,', 'Wednesday,', 'Thursday,', 'Friday,', 'Saturday,'][dat.getDay()];
+
+    const getMonthName = ['January,', 'February,', 'March,', 'April,', 'May,', 'June,', 'July,', 'August,', 'September,', 'October,', 'November,', 'December,'][dat.getMonth()];
 
     if (mdays == '1') {
         mdays = mdays + 'st';
@@ -50,13 +53,10 @@ function clockUpdate() {
     // m.insertAdjacentHTML('afterend', '<span>:</span>');
     // h.insertAdjacentHTML('afterend', '<span>:</span>');
 
-    const getWeekday = ['Sunday,', 'Monday,', 'Tuesday,', 'Wednesday,', 'Thursday,', 'Friday,', 'Saturday,'][dat.getDay()];
 
-    let getMonthName = ['January,', 'February,', 'March,', 'April,', 'May,', 'June,', 'July,', 'August,', 'September,', 'October,', 'November,', 'December,'][dat.getMonth()];
-
-    if (h > 12) {
+    if (h >= 12) {
         h = h - 12;
-        AMPM = "PM"
+        AMPM = "PM";
     }
 
     //ternary operators
